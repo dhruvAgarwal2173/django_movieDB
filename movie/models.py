@@ -1,26 +1,12 @@
 from django.db import models
 from django.utils import timezone
-
+from django.urls import reverse
 # Create your models here.
-
-class movie_add(models.Model):
-    title = models.CharField(unique=True, blank=False, null=False, help_text='Please enter the movie name', max_length=250)
-    genre = models.CharField(max_length=10, choices=[
-        ('AC', 'Action'),
-        ('CO', 'Comedy'),
-        ('TH', 'Thriller'),
-        ('SH', 'Shit'),
-    ])
-    date_release = models.DateField(unique=False, help_text='Enter date of movie release')
-    date_added = models.DateTimeField(default=timezone.now, help_text='Enter date of addition to database')
-
-
-#
-# class movie_delete():
-#     pass
-#
-# class movie_list():
-#     pass
-#
-# class movie_detail():
-#     pass
+class Movie(models.Model):
+    title = models.CharField(max_length=150, unique=True)
+    genre = models.CharField(max_length=75, )
+    release = models.CharField(max_length=4, help_text='Enter the initial release year')
+    rating = models.CharField(max_length=1,help_text="Enter a value from 1 to 10")
+    #image = models.ImageField()
+    def __str__(self):
+        return self.title

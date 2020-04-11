@@ -1,0 +1,9 @@
+{% block add_content %}
+<h2>Add a movie to your database here</h2>
+<form action="" method="post"> {% csrf_token %}
+    {{ movie.as_p }}
+    <br>
+    <input type="submit" value="Submit"/>
+</form>
+
+{% endblock add_content %}
