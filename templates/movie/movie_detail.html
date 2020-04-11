@@ -1,8 +1,8 @@
-{% block movie_detail_content %}
+{% block content %}
     {% for m in movie %}
         <h2>{{ m.title }}</h2>
             <ul>Genre:        {{ m.genre }}</ul>
             <ul>Release Year: {{ m.release}}</ul>
             <ul>Rating:       {{ m.rating }}</ul>
     {% endfor %}
-{% endblock movie_detail_content %}
+{% endblock content %}

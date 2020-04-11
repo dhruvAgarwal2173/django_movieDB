@@ -17,7 +17,7 @@ def movie_add_view(request):
     form_context = {
         'movie' : form
         }
-    messages.success(request, f'Movie has been added!')
+    messages.success(request, 'Movie has been added!')
     return render(request, 'movie/movie_add.html', form_context)
 
 

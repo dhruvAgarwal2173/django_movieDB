@@ -3,5 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <title>Movie App</title>
+
 </head>
+<body>
+    <h4><a href="{% url 'movie-home' %}">| Home |</a><a href="{% url 'movie-detail' %}"> Movie List |</a></h4>
+    {% block content %}
+    {% endblock %}
+</body>
 </html>
