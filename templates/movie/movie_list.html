@@ -1,0 +1,12 @@
+{% extends 'movie/movie_base.html' %}
+{% block content %}
+
+    {% for m in movie|dictsort:'title' %}
+        <ul>
+            <li>
+                    {{ m.title }} ({{ m.release }})
+            </li>
+        </ul>
+    {% endfor %}
+
+{% endblock %}
