@@ -38,6 +38,10 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
+    # THIRD PARTY APPS
+    'rest_framework',
+
+    # MY APPS
     'movie',
     #'blog',
 ]
