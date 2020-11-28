@@ -7,12 +7,8 @@ from django.contrib import messages
 
 def movie_add_view(request):
     form = MovieForm(request.POST)
-    # print('\n\n********************')
-    # print(form)
     if form.is_valid():
         form.save()
-        # print('\n\n********************')
-        # print(form)
     form = MovieForm
     context = {
         'movie' : form
